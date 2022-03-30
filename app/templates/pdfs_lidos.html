@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <title></title>
+    <h1 style= "text-align: center;">PDFs LIDOS</h1>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+
+<style>
+
+ td {
+        width: 140px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+      }
+
+</style>
+<table>
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>ARQUIVO</th>
+        <th>PAGINAS</th>
+        <th>TRIBUNAL</th>
+        <th>HORA ARQUIVO</th>
+        <th>PREFEITURA</th>
+        <th>DATA HORA</th>
+
+    </tr>
+    </thead>
+    <tbody>
+        {% for i in data %}
+            <tr>
+                <td>{{i['id']}}</td>
+                <td>{{i['arquivo']}}</td>
+                <td>{{i['paginas']}}</td>
+                <td>{{i['tribunal']}}</td>
+                <td>{{i['hora_arquivo']}}</td>
+                <td>{{i['prefeitura']}}</td>
+                <td>{{i['datahora']}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+    <p align="right"><a href="/homepage" ><button class=grey style="height:50px;width:80px">VOLTAR</button></a></p>
+</body>
+</html>
